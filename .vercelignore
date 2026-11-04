@@ -1,0 +1,11 @@
+# Never upload local secrets; production env vars live in the Vercel project.
+.env*
+!.env.example
+
+# Local build/test output
+.next
+node_modules
+test-results
+playwright-report
+coverage
+*.tsbuildinfo
