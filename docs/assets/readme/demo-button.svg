@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 76" width="340" height="76" role="img" aria-labelledby="t">
+  <title id="t">Try the live demo</title>
+  <defs>
+    <linearGradient id="fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="pill"><rect x="8" y="8" width="324" height="60" rx="30"/></clipPath>
+    <style>
+      text { font-family: "Segoe UI", Inter, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+      .halo { animation: halo 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes halo { 0%,100% { opacity: .55; transform: scale(1) } 50% { opacity: .15; transform: scale(1.04, 1.12) } }
+      .sweep { animation: sweep 3.2s ease-in-out infinite; }
+      @keyframes sweep { 0% { transform: translateX(-140px) skewX(-20deg) } 45%,100% { transform: translateX(420px) skewX(-20deg) } }
+      .play { animation: nudge 1.6s ease-in-out infinite; }
+      @keyframes nudge { 0%,100% { transform: translateX(0) } 50% { transform: translateX(3px) } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+  <rect class="halo" x="4" y="4" width="332" height="68" rx="34" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+  <rect x="8" y="8" width="324" height="60" rx="30" fill="url(#fill)"/>
+  <g clip-path="url(#pill)"><rect class="sweep" x="0" y="0" width="90" height="76" fill="url(#sheen)"/></g>
+  <circle cx="44" cy="38" r="18" fill="#fff" fill-opacity="0.2"/>
+  <path class="play" d="M38 28 L52 38 L38 48 Z" fill="#fff"/>
+  <text x="74" y="45" font-size="21" font-weight="700" fill="#fff">Try the live demo</text>
+  <text x="300" y="45" font-size="22" font-weight="700" fill="#fff" text-anchor="middle">→</text>
+</svg>

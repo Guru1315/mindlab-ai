@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-labelledby="t d">
+  <title id="t">MindLab AI features</title>
+  <desc id="d">Six floating feature cards: cited answers, any source, audio overviews, study tools, flashcards and quizzes, private by design.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0a1a"/><stop offset="1" stop-color="#141038"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#231c57"/><stop offset="1" stop-color="#15113a"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.09"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="cardClip"><rect width="380" height="170" rx="20"/></clipPath>
+    <style>
+      text { font-family: "Segoe UI", Inter, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+      .tile { animation: hover 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .t2 { animation-delay: -1s } .t3 { animation-delay: -2s } .t4 { animation-delay: -3s } .t5 { animation-delay: -4s } .t6 { animation-delay: -5s }
+      @keyframes hover {
+        0%,100% { transform: translateY(0) skewY(0deg) }
+        25% { transform: translateY(-8px) skewY(-0.6deg) }
+        75% { transform: translateY(4px) skewY(0.6deg) }
+      }
+      .sweep { animation: sweep 6s ease-in-out infinite; }
+      .s2 { animation-delay: 1s } .s3 { animation-delay: 2s } .s4 { animation-delay: 3s } .s5 { animation-delay: 4s } .s6 { animation-delay: 5s }
+      @keyframes sweep { 0% { transform: translateX(-260px) } 30%,100% { transform: translateX(520px) } }
+      .ring { animation: ring 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes ring { 0%,100% { transform: scale(1); opacity: .35 } 50% { transform: scale(1.25); opacity: .0 } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+    <!-- One card template: background, shadow and moving sheen -->
+    <g id="shell">
+      <rect y="10" width="380" height="170" rx="20" fill="#000" opacity="0.35"/>
+      <rect width="380" height="170" rx="20" fill="url(#card)" stroke="#8b7cf6" stroke-opacity="0.45"/>
+    </g>
+  </defs>
+
+  <rect width="1280" height="440" rx="24" fill="url(#bg)"/>
+
+  <!-- Row 1 -->
+  <g transform="translate(40 40)"><g class="tile">
+    <use href="#shell"/>
+    <g clip-path="url(#cardClip)"><rect class="sweep" x="0" y="0" width="200" height="170" fill="url(#sheen)"/></g>
+    <circle cx="52" cy="52" r="26" fill="#8b5cf6" class="ring"/><circle cx="52" cy="52" r="26" fill="#8b5cf6" fill-opacity="0.22"/>
+    <rect x="38" y="42" width="22" height="4" rx="2" fill="#ede9fe"/><rect x="38" y="51" width="16" height="4" rx="2" fill="#ede9fe" opacity=".6"/>
+    <circle cx="64" cy="62" r="8" fill="#a78bfa"/><text x="64" y="66" text-anchor="middle" font-size="10" font-weight="800" fill="#1e1b4b">1</text>
+    <text x="96" y="60" font-size="22" font-weight="700" fill="#f5f3ff">Cited answers</text>
+    <text x="32" y="118" font-size="15.5" fill="#b8b3db"><tspan x="32">Every claim links to the exact passage</tspan><tspan x="32" dy="22">it came from — click to see it highlighted.</tspan></text>
+  </g></g>
+
+  <g transform="translate(450 40)"><g class="tile t2">
+    <use href="#shell"/>
+    <g clip-path="url(#cardClip)"><rect class="sweep s2" x="0" y="0" width="200" height="170" fill="url(#sheen)"/></g>
+    <circle cx="52" cy="52" r="26" fill="#22d3ee" fill-opacity="0.18"/>
+    <rect x="36" y="38" width="20" height="26" rx="3" fill="#f472b6" transform="rotate(-10 46 51)"/>
+    <rect x="46" y="38" width="20" height="26" rx="3" fill="#22d3ee"/>
+    <text x="96" y="60" font-size="22" font-weight="700" fill="#f5f3ff">Any source</text>
+    <text x="32" y="118" font-size="15.5" fill="#b8b3db"><tspan x="32">PDF, Word, Markdown, web pages and</tspan><tspan x="32" dy="22">pasted notes, indexed in seconds.</tspan></text>
+  </g></g>
+
+  <g transform="translate(860 40)"><g class="tile t3">
+    <use href="#shell"/>
+    <g clip-path="url(#cardClip)"><rect class="sweep s3" x="0" y="0" width="200" height="170" fill="url(#sheen)"/></g>
+    <circle cx="52" cy="52" r="26" fill="#f472b6" fill-opacity="0.18"/>
+    <g fill="#f9a8d4">
+      <rect x="36" y="44" width="5" height="16" rx="2.5"><animate attributeName="height" values="16;6;16" dur="1s" repeatCount="indefinite"/><animate attributeName="y" values="44;49;44" dur="1s" repeatCount="indefinite"/></rect>
+      <rect x="45" y="38" width="5" height="28" rx="2.5"><animate attributeName="height" values="28;12;28" dur="1.2s" repeatCount="indefinite"/><animate attributeName="y" values="38;46;38" dur="1.2s" repeatCount="indefinite"/></rect>
+      <rect x="54" y="42" width="5" height="20" rx="2.5"><animate attributeName="height" values="20;8;20" dur="0.9s" repeatCount="indefinite"/><animate attributeName="y" values="42;48;42" dur="0.9s" repeatCount="indefinite"/></rect>
+      <rect x="63" y="46" width="5" height="12" rx="2.5"><animate attributeName="height" values="12;20;12" dur="1.1s" repeatCount="indefinite"/><animate attributeName="y" values="46;42;46" dur="1.1s" repeatCount="indefinite"/></rect>
+    </g>
+    <text x="96" y="60" font-size="22" font-weight="700" fill="#f5f3ff">Audio overviews</text>
+    <text x="32" y="118" font-size="15.5" fill="#b8b3db"><tspan x="32">Two-host podcast, brief, debate or critique,</tspan><tspan x="32" dy="22">generated from your sources.</tspan></text>
+  </g></g>
+
+  <!-- Row 2 -->
+  <g transform="translate(40 240)"><g class="tile t4">
+    <use href="#shell"/>
+    <g clip-path="url(#cardClip)"><rect class="sweep s4" x="0" y="0" width="200" height="170" fill="url(#sheen)"/></g>
+    <circle cx="52" cy="52" r="26" fill="#fbbf24" fill-opacity="0.18"/>
+    <path d="M38 40 h14 a4 4 0 0 1 4 4 v20 a3 3 0 0 0 -3 -3 h-15 z M66 40 h-14 a4 4 0 0 0 -4 4 v20 a3 3 0 0 1 3 -3 h15 z" fill="#fcd34d"/>
+    <text x="96" y="60" font-size="22" font-weight="700" fill="#f5f3ff">Study tools</text>
+    <text x="32" y="118" font-size="15.5" fill="#b8b3db"><tspan x="32">Study guides, FAQs, briefings, timelines</tspan><tspan x="32" dy="22">and mind maps — editable and exportable.</tspan></text>
+  </g></g>
+
+  <g transform="translate(450 240)"><g class="tile t5">
+    <use href="#shell"/>
+    <g clip-path="url(#cardClip)"><rect class="sweep s5" x="0" y="0" width="200" height="170" fill="url(#sheen)"/></g>
+    <circle cx="52" cy="52" r="26" fill="#34d399" fill-opacity="0.18"/>
+    <rect x="34" y="38" width="30" height="22" rx="4" fill="#6ee7b7" opacity=".55" transform="rotate(-8 49 49)"/>
+    <rect x="40" y="44" width="30" height="22" rx="4" fill="#34d399"/>
+    <path d="M48 55 l4 4 l8 -9" fill="none" stroke="#064e3b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="96" y="60" font-size="22" font-weight="700" fill="#f5f3ff">Flashcards &amp; quizzes</text>
+    <text x="32" y="118" font-size="15.5" fill="#b8b3db"><tspan x="32">Flip cards and multiple-choice quizzes</tspan><tspan x="32" dy="22">with an explanation for every answer.</tspan></text>
+  </g></g>
+
+  <g transform="translate(860 240)"><g class="tile t6">
+    <use href="#shell"/>
+    <g clip-path="url(#cardClip)"><rect class="sweep s6" x="0" y="0" width="200" height="170" fill="url(#sheen)"/></g>
+    <circle cx="52" cy="52" r="26" fill="#60a5fa" fill-opacity="0.18"/>
+    <path d="M52 34 l16 6 v10 c0 10 -7 17 -16 20 c-9 -3 -16 -10 -16 -20 v-10 z" fill="#93c5fd"/>
+    <rect x="46" y="48" width="12" height="10" rx="2" fill="#1e3a8a"/><path d="M48 48 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#1e3a8a" stroke-width="2.2"/>
+    <text x="96" y="60" font-size="22" font-weight="700" fill="#f5f3ff">Private by design</text>
+    <text x="32" y="118" font-size="15.5" fill="#b8b3db"><tspan x="32">Row-level security on every table and</tspan><tspan x="32" dy="22">private storage. Your sources stay yours.</tspan></text>
+  </g></g>
+</svg>
