@@ -3,11 +3,6 @@ import path from "node:path";
 import { PGlite } from "@electric-sql/pglite";
 import { vector } from "@electric-sql/pglite-pgvector";
 
-/**
- * Minimal stand-ins for the Supabase-managed schemas (auth, storage) and roles,
- * so the real migration files can be applied and RLS exercised in-process.
- * auth.uid() reads the same JWT claim setting PostgREST sets in production.
- */
 const SUPABASE_SHIM = `
 create schema if not exists extensions;
 create schema auth;
@@ -70,7 +65,6 @@ export async function createUser(db: PGlite, id: string, email: string) {
   ]);
 }
 
-/** Run `fn` as an authenticated user, the way PostgREST does for a JWT. */
 export async function asUser<T>(db: PGlite, userId: string, fn: () => Promise<T>): Promise<T> {
   await db.exec(`set role authenticated; select set_config('request.jwt.claim.sub', '${userId}', false);`);
   try {
